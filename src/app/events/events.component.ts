@@ -10,10 +10,15 @@ import { EVENTS } from '../models/mock-events'
 export class EventsComponent implements OnInit {
 
   events = EVENTS;
+  selectedEvent: Event;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelect(event: Event): void {
+    this.selectedEvent = event;
   }
 
 }
